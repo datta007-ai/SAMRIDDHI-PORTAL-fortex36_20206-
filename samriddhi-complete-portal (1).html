@@ -15,45 +15,55 @@
 
     <style>
         :root {
-            /* Trustworthy Blue Gov Theme */
-            --bg-grad-start: #e3f2fd;
-            --bg-grad-end: #f5f5f5;
+            /* Trustworthy Blue Gov Theme - Refined */
+            --bg-grad-start: #EFF6FF;
+            /* Soft Blue */
+            --bg-grad-end: #F8FAFC;
+            /* Slate 50 */
 
             --primary: #1565c0;
+            /* Official Blue */
             --primary-light: #42a5f5;
             --primary-dark: #0d47a1;
 
-            --glass-bg: rgba(255, 255, 255, 0.9);
-            --glass-border: rgba(255, 255, 255, 0.6);
-            --glass-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            --glass-blur: blur(12px);
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            /* Softer shadow */
+            --glass-blur: blur(16px);
 
             --accent-green: #2e7d32;
-            --accent-orange: #ef6c00;
+            --accent-orange: #f57c00;
 
-            --text-main: #263238;
-            --text-muted: #546e7a;
-            --radius-md: 8px;
+            --text-main: #1e293b;
+            /* Slate 800 */
+            --text-muted: #64748b;
+            /* Slate 500 */
+            --radius-md: 16px;
+            /* Modern curves */
         }
 
         [data-theme="dark"] {
-            /* Night Blue Theme */
-            --bg-grad-start: #0B1C2D;
-            --bg-grad-end: #0f263d;
+            /* Night Blue Glass Theme */
+            --bg-grad-start: #0f172a;
+            /* Slate 900 */
+            --bg-grad-end: #1e293b;
+            /* Slate 800 */
 
-            --primary: #3B82F6;
-            /* Soft Royal Blue */
+            --primary: #3b82f6;
+            /* Blue 500 */
             --primary-light: #60a5fa;
             --primary-dark: #2563eb;
 
-            --glass-bg: rgba(11, 28, 45, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            /* Deep Navy Glass */
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
-            --text-main: #f3f4f6;
-            /* High contrast off-white */
-            --text-muted: #9ca3af;
-            /* Clear accessible gray */
+            --text-main: #f8fafc;
+            /* Slate 50 */
+            --text-muted: #94a3b8;
+            /* Slate 400 */
 
             --accent-green: #34d399;
             --accent-orange: #fbbf24;
@@ -239,17 +249,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             font-size: 0.95rem;
             font-weight: 600;
-            border-radius: 12px;
+            border-radius: 50px;
+            /* Pill Shape */
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             font-family: inherit;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.02em;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Subtle lift */
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .btn:active {
@@ -598,6 +616,9 @@
             background: #e3f2fd;
             color: var(--primary);
             border-left-color: var(--primary);
+            border-radius: 0 50px 50px 0;
+            /* Soft pill-end */
+            margin-right: 1rem;
         }
 
         .sidebar-item i {
